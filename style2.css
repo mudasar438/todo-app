@@ -1,0 +1,183 @@
+body {
+  background-color: rgb(213, 192, 233);
+}
+.wrapper {
+  background-color: white;
+  margin: 50px auto;
+  width: 70%;
+  border-radius: 7px;
+}
+.task-input {
+  height: 52px;
+  padding: 10px 25px;
+}
+.task-input input {
+  height: 100%;
+  width: 98.5%;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 18px;
+}
+.task-input input ::placeholder {
+  color: #bfbfbf;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 25px;
+  border: 1px solid #ccc;
+}
+.filtesr span {
+  margin: 0px 8px;
+  font-size: 17px;
+}
+.completed {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.output {
+  width: 50%;
+  border: 1px solid black;
+  margin-right: 1px;
+  padding: 5px 5px;
+}
+.hold {
+  border: solid red 4px;
+}
+.hide {
+  display: none;
+}
+
+.control,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control .clear-btn {
+  font-size: 17px;
+  padding: 7px 13px;
+  border: none;
+  color: white;
+  background-color: #3c87ff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.control .saveEd {
+  display: none;
+  font-size: 17px;
+  padding: 7px 13px;
+  border: none;
+  color: white;
+  background-color: #3c87ff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.task-box {
+  margin: 20px 25px;
+}
+.task-box .task {
+  list-style: none;
+  font-size: 17px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+}
+.task-box .task:last-child {
+  margin-bottom: 0px;
+  border-bottom: 0px;
+  padding-bottom: 0px;
+}
+.task {
+  background-color: rgb(243, 207, 207);
+  border: 1px black solid;
+}
+.task label {
+  display: flex;
+}
+.task label p.checked {
+  text-decoration: line-through;
+}
+.task label input {
+  margin-top: 18px;
+  margin-right: 10px;
+}
+.task .setting {
+  cursor: pointer;
+  position: relative;
+}
+.setting .task-menu {
+  background-color: white;
+  padding: 5px 0px;
+  z-index: 2;
+  right: -5px;
+  bottom: -65px;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  position: absolute;
+}
+.setting .task-menu.show {
+  transform: scale(1);
+  width: 80px;
+}
+.task-menu li {
+  width: 50px;
+  height: 25px;
+  margin: bottom 2px;
+  padding: 12px 10px;
+  font-size: 12px;
+  justify-content: flex-start;
+}
+.task-menu li:hover {
+  background-color: rgb(156, 156, 180);
+}
+.task-menu li i {
+  margin: 8px;
+}
+
+.timeinp {
+  margin: 10px 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.container2 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.allwrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+/* .container2 canvas {
+  height: 150px;
+  width: 150px;
+} */
+#saveTodo {
+  display: flex;
+  padding: 10px 20px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 70px;
+  position: relative;
+}
+.uldiv {
+  display: flex;
+  justify-content: space-center;
+}
+.uldiv ul {
+  border: 1px solid black;
+  width: 50%;
+  margin-right: 10px;
+  padding: 0px 10px;
+}

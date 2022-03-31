@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body>
+    <div class="allwrapper">
+      <div class="wrapper">
+        <div class="task-input">
+          <input type="text" placeholder="Enter todo" />
+        </div>
+        <input type="number" class="timeinp" placeholder="Enter time in hrs" />
+        <button class="savetodo" id="saveTodo">Save Todo</button>
+        <div class="control">
+          <button class="saveEd" id="saveEdit">SaveEdit</button>
+          <button class="clear-btn">Clear All</button>
+        </div>
+        <div class="uldiv">
+          <span id="all" class="active">All</span>
+          <ul class="task-box"></ul>
+          <span class="completed">Completed</span>
+          <div class="output"></div>
+        </div>
+      </div>
+      <div id="chart1" class="container2">
+        <canvas
+          id="myChart"
+          width="40"
+          height="40"
+          style="display: block"
+        ></canvas>
+      </div>
+    </div>
+
+    <script src="./javascript2.js"></script>
+    <script src="./chart/chart.js"></script>
+
+    <script>
+      var ourChart = null;
+      // import { todos, timestore } from "./javascript2.js";
+
+      const mylabels = ["January", "February", "March", "April", "May", "June"];
+      const myChart = document.getElementById("myChart").getContext("2d");
+      // let = JSON.parse(localStorage.getItem("todo-list"));
+      // console.log(tod
+
+      function mypieChart() {
+        ourChart = new Chart(myChart, {
+          type: "pie",
+          data: {
+            labels: todos.map((items) => {
+              return items.name;
+            }),
+            datasets: [
+              {
+                data: todos.map((items) => {
+                  return items.mtime;
+                }),
+
+                backgroundColor: [
+                  "red",
+                  "green",
+                  "yellow",
+                  "pink",
+                  "blue",
+                  "orange",
+                ],
+                borderColor: ["black"],
+              },
+            ],
+          },
+          Options: {
+            responsive: false,
+          },
+        });
+      }
+      mypieChart();
+    </script>
+  </body>
+</html>
